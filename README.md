@@ -6,7 +6,9 @@ A modern web application for collecting time booking information and generating 
 
 - **Modern UI**: Clean, responsive interface built with shadcn/ui components
 - **Form Validation**: Robust form validation using react-hook-form and Zod
-- **Barcode Support**: Integrated barcode scanning functionality (manual input for development)
+- **Barcode Scanning**: Full camera-based barcode scanning with html5-qrcode (Code128/Code39 support)
+- **Time Entry**: Custom datetime format (dd/mm/yy hh:mm) with -1/+1 hour adjustment buttons
+- **Hardcoded Entity Code**: Entity code automatically set to "330R" (hidden from UI)
 - **XML Generation**: Automatic XML generation based on the provided sample format
 - **Real-time Feedback**: Instant validation and error handling
 - **Export Options**: Copy to clipboard and download generated XML
@@ -16,7 +18,7 @@ A modern web application for collecting time booking information and generating 
 - **Frontend**: Next.js 15, React 19, TypeScript
 - **UI Components**: shadcn/ui, Tailwind CSS
 - **Form Handling**: react-hook-form, Zod validation
-- **Barcode Scanning**: react-qr-barcode-scanner
+- **Barcode Scanning**: html5-qrcode (Code128/Code39 support)
 - **Date Handling**: date-fns
 
 ## Project Structure
@@ -64,7 +66,7 @@ npm install
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3001](http://localhost:3001) in your browser
 
 ### Building for Production
 
@@ -140,9 +142,10 @@ node test-api.js
 
 ## Development Notes
 
-- The barcode scanner currently uses manual input for development purposes
-- Camera-based scanning will be available in production environments
-- All datetime inputs are converted to ISO 8601 format for XML output
+- The barcode scanner uses html5-qrcode for camera-based scanning (requires HTTPS)
+- Entity code is hardcoded to "330R" and hidden from the UI
+- Datetime display format is dd/mm/yy hh:mm with ISO 8601 backend storage
+- Time adjustment buttons (-1/+1 hour) with future time prevention
 - Form validation ensures all required fields are completed before submission
 
 ## Contributing

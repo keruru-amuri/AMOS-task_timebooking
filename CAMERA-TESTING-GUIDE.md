@@ -17,10 +17,10 @@
 - Visual feedback during camera initialization
 - Improved video display with mirroring
 
-### 4. **ZXing Integration**
-- Proper barcode detection loop
+### 4. **html5-qrcode Integration**
+- Proper barcode detection with html5-qrcode library
 - Support for Code128, Code39, and other formats
-- Continuous scanning with 300ms intervals
+- Real-time continuous scanning
 
 ## 🧪 **Testing Steps**
 
@@ -39,7 +39,7 @@ ngrok http 3001
 3. **Allow camera permissions when prompted**
 4. You should see:
    - Live camera feed in the video element
-   - Red overlay with "Position barcode here"
+   - Green overlay with "Position barcode here"
    - Instructions for barcode positioning
 
 ### **Step 3: Mobile Device Testing**
@@ -55,10 +55,10 @@ ngrok http 3001
 2. "Starting camera..." loading indicator appears
 3. Browser prompts for camera permission
 4. After permission granted → Live camera feed appears
-5. Red scanning overlay shows target area
+5. Green scanning overlay shows target area
 
 ### **Barcode Detection:**
-1. Position barcode within red rectangle
+1. Position barcode within green rectangle
 2. Hold steady for 2-3 seconds
 3. Barcode automatically detected and decoded
 4. Scanner closes and barcode populates form field

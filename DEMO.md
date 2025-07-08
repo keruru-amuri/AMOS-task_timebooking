@@ -8,17 +8,19 @@ This web application collects time booking information and generates XML transfe
 
 ### 1. **Time Booking Form**
 - User Sign input field
-- Entity Code input field  
-- Barcode input with scanning capability
-- Start and End time pickers with "Now" buttons
+- Entity Code hardcoded to "330R" (hidden from UI)
+- Barcode input with camera scanning capability
+- Start and End time fields with dd/mm/yy hh:mm format
+- Time adjustment buttons (-1/+1 hour) with "Now" buttons
 - Form validation using Zod schema
 - Real-time error feedback
 
 ### 2. **Barcode Scanner**
-- Manual barcode entry (for development)
-- Camera scanning capability (ready for production)
+- Full camera-based barcode scanning with html5-qrcode
+- Support for Code128 and Code39 formats
+- Green overlay targeting system
 - Modal interface for barcode input
-- Error handling for camera access
+- Error handling with manual input fallback
 
 ### 3. **XML Generation**
 - Automatic XML generation matching the sample format
@@ -74,7 +76,7 @@ End Time: 2024-12-05T05:00
    ```
 
 2. **Open in browser:**
-   Navigate to `http://localhost:3000`
+   Navigate to `http://localhost:3001`
 
 3. **Fill out the form:**
    - Enter the sample data above

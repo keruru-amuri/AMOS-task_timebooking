@@ -16,7 +16,7 @@
 
 3. **In a NEW terminal, create HTTPS tunnel:**
    ```bash
-   ngrok http 3000
+   ngrok http 3001
    ```
 
 4. **Copy the HTTPS URL** (something like `https://abc123.ngrok.io`)
@@ -46,7 +46,7 @@
 ### If ngrok installation fails:
 1. Download ngrok manually from https://ngrok.com/download
 2. Extract to a folder in your PATH
-3. Run `ngrok http 3000`
+3. Run `ngrok http 3001`
 
 ### If camera still doesn't work:
 1. Make sure you're using the HTTPS URL (starts with `https://`)
