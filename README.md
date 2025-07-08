@@ -52,7 +52,7 @@ src/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/keruru-amuri/AMOS-task_timebooking.git
 cd timebooking
 ```
 
