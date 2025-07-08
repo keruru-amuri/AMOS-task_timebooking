@@ -53,7 +53,7 @@ src/
 1. Clone the repository:
 ```bash
 git clone https://github.com/keruru-amuri/AMOS-task_timebooking.git
-cd timebooking
+cd AMOS-task_timebooking
 ```
 
 2. Install dependencies:
